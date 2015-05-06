@@ -1,0 +1,20 @@
+#+OPTIONS: \n:t
+#+STYLE: <link rel="stylesheet" type="text/css" href="style.css" />
+* Ubuntu使用记录
+** 常用软件
+   wget/mwget 命令行下载工具
+** 常用命令
+*** wget
+**** 简介
+    wget是linux下用来下载文件的命令,它是多线程的,如果感觉速度比较慢可以尝试多线程版本的mwget
+**** wget http://a.com/a.gif
+     下载一个文件
+*** mwget
+**** 简介
+    mwget是多线程版本的wget,默认不可以使用apt-get下载它,可以 [[http://sourceforge.net/projects/kmphpfm/?source=dlp][点击这里]] 下载(http://sourceforge.net/projects/kmphpfm/?source=dlp)
+**** mwget http://ccav.com/av.avi
+     下载一个文件
+**** mwget -n 10 http://ccav.com/av.avi
+     使用10个线程下载文件
+*** grep
+    grep "搜索文字" *.org -Rn #n标识显示行号
