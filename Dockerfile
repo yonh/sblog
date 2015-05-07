@@ -15,7 +15,7 @@ ENV REFERSHED_AT 2015-05-07
 
 #执行命令，docker会在每条run指令后创建一个新的镜像层
 #使用官方源实在是太慢了，下载软件还会失败，更改阿里源作替换
-ADD sources.list /etc/apt/sources.list
+#ADD sources.list /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get -y install ruby ruby-dev make g++ emacs
 #移除官方源
