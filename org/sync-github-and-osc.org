@@ -1,3 +1,5 @@
+#+OPTIONS: \n:t
+#+STYLE: <link rel="stylesheet" type="text/css" href="style.css" />
 * 将代码同时存放在github和gitosc
 **
 ** 预备说明
