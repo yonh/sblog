@@ -1,4 +1,4 @@
-# Version 0.0.1
+# Version 0.0.2
 # build
 # sudo docker build -t yonh/sblog
 # run
@@ -31,6 +31,4 @@ RUN mkdir -p /opt/webapp
 #公开端口
 EXPOSE 80
 
-ADD run.sh /run.sh
-RUN chmod +x /run.sh
-CMD [ "/run.sh" ]
+CMD [ "/opt/webapp/run.sh" ]

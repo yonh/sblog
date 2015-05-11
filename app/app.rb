@@ -3,6 +3,9 @@ require 'sinatra'
 
 class App < Sinatra::Application
 	get '/' do
-	  html = IO.read('../org/html/linux-notes.html')
+	  	IO.read('../org/html/index.html')
+	end
+	get '/:id' do
+		IO.read("../org/html/#{params['id']}.html")
 	end
 end

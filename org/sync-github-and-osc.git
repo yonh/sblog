@@ -1,0 +1,49 @@
+* 将代码同时存放在github和gitosc
+**
+** 预备说明
+   时间: 2015-05-11 23:45:21
+   本文描述如何新建一个新的项目,并同步到github和gitosc中,当然实现方式有很多中,这只是我个人的思路
+   我本人也没有正式从书本上完整的看过git的说明,对于其中一些说法可能不够专业,见谅
+
+   基于linux(ubuntu)操作系统,mac应该差不多,windows有点区别(我猜),不想写
+   基本的git指令,会使用github和gitosc其中一个
+   本文用到的指令有
+   git push, git remote
+
+   本文参考了以下文章
+   http://www.oschina.net/question/82993_133520 点击[[http://www.oschina.net/question/82993_133520][这里]]访问
+** 在github和gitosc创建空的代码库
+   分别在gitosc和github创建空库,注意是空库,不然会造成其他麻烦(什么麻烦自己试试便知)
+   如:我创建的项目名都是testgit, 项目地址分别是(ssh方式的)
+   git@github.com:yonh/testgit.git #别告诉我你不懂这个链接是什么,这是你在github上你的代码库的地址 => git@github.com:你的用户名/你的代码库.git
+   git@git.oschina.net:yonh/testgit.git #同上
+** 在本地目录执行git库初始化
+   跑到你的某个你要纳入git管理的目录,执行
+   git init
+   ok,现在你可以在此目录查看到多了个.git文件夹
+** 添加远程仓库
+   什么是远程仓库,就是你在push代码的时候,将你本地的代码推送到服务器,可以理解为同步代码库
+   添加gitosc远程仓库
+   git remote add osc git@git.oschina.net:yonh/testgit.git #记得替换自己的用户名和仓库名哦
+   添加github远程仓库
+   git remote add github git@github.com:yonh/testgit.git #同上
+
+   添加完成后,可以使用git remote查看所有的远程仓库,此时的状态应该是
+   git remote[回车]
+   github
+   osc
+** 设置默认push分支(我这个说法不知道正不正确)
+   此时如果你使用git add和git commit后想要push代码会出错
+   -------
+   fatal: No configured push destination.
+   Either specify the URL from the command-line or configure a remote repository using
+   git remote add <name> <url>
+   and then push using the remote name
+   git push <name>
+   -------
+   此时你需要设置默认的push的远程仓库,可以使用如下语句push代码并将默认仓库push仓库为osc,分支为master
+   git push --set-upstream osc master
+   改为github仓库可以用
+   git push --set-upstream github master
+
+   此时你可以自由的使用git push osc 和git push github将代码push到gitosc和github去了,完毕

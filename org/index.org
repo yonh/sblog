@@ -1,0 +1,6 @@
+#+OPTIONS: \n:t
+#+STYLE: <link rel="stylesheet" type="text/css" href="style.css" />
+* ubuntu
+  [[../linux-notes][ubuntu使用笔记]]
+* git
+  [[/sync-github-and-osc][将代码同时同步到github和gitosc]]
