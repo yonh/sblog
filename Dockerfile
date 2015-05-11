@@ -26,7 +26,6 @@ RUN gem install --no-rdoc --no-ri sinatra rqrcode_png thin
 #RUN sed -i "s/:DoNotReverseLookup => nil/:DoNotReverseLookup=> true/g" /usr/lib/ruby/1.9.1/webrick/config.rb
 ADD app /opt/webapp/
 ADD org /opt/org/
-RUN mkdir -p /opt/webapp
 
 #公开端口
 EXPOSE 80
