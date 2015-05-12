@@ -5,7 +5,7 @@ class App < Sinatra::Application
 	get '/' do
 	  	IO.read('/opt/org/html/index.html')
 	end
-	get '/:id' do
+	get '/a/:id' do
 		IO.read("/opt/org/html/#{params['id']}.html")
 	end
 	get '/style' do
