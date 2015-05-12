@@ -1,5 +1,5 @@
 #+OPTIONS: \n:t
-#+STYLE: <link rel="stylesheet" type="text/css" href="style.css" />
+#+STYLE: <link rel="stylesheet" type="text/css" href="/style.css" />
 * Ubuntu使用记录
 ** 常用软件
    wget/mwget 命令行下载工具
