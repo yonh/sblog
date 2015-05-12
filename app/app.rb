@@ -8,4 +8,7 @@ class App < Sinatra::Application
 	get '/:id' do
 		IO.read("/opt/org/html/#{params['id']}.html")
 	end
+	get '/style' do
+		IO.read("/opt/webapp/public/style.css")
+	end
 end
