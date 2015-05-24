@@ -34,7 +34,7 @@
    git remote[回车]
    github
    osc
-** 设置默认push分支(我这个说法不知道正不正确)
+** 设置默认push分支
    此时如果你使用git add和git commit后想要push代码会出错
    -------
    fatal: No configured push destination.

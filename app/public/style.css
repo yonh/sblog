@@ -36,6 +36,9 @@ body {
     padding: 0;
     z-index: 99;
 }
+.title .return {   
+    text-decoration:none;font-size:20px;left:5px;position:fixed;line-height:40px
+}
 
 #orgquote {
     position: fixed;
@@ -271,31 +274,56 @@ li {
     /*list-style-image : url(triangle.png);   这个图片就是每个li 前面的小箭头 */
 }
 
+
+
 #table-of-contents {
     font-size: 9pt;
     position: fixed;
     /*right: 0em;*/
     top: 0em;
     background: white;
-    -webkit-box-shadow: 0 0 1em #777777;
-    -moz-box-shadow: 0 0 1em #777777;
-    -webkit-border-bottom-left-radius: 5px;
-    -moz-border-radius-bottomleft: 5px;
-    text-align: right;
+    -webkit-box-shadow: 0 0 0.5em #777;
+    box-shadow: 0 0 0.5em #777;
+    -webkit-border-radius: 5px;
+    border-radius:0 0 3px 3px;
+    text-align: left;
     /* ensure doesn't flow off the screen when expanded */
     max-height: 80%;
     overflow: auto; 
     z-index: 200;
+    left:120px;
 }
 
 #table-of-contents h2 {
     font-size: 9pt;
     max-width: 100px;
     font-weight: normal;
-    padding-left: 0.5em;
-    padding-top: 0.05em;
-    padding-bottom: 0.05em; 
+    left: 100px;
+
+    font-size: 20px;
+    line-height: 40px;
+    padding: 0;
+    margin:0;
+    font-family: Courier New;
+    font-weight: normal;
+/*
+    font-size: 20px;
+    left: 5px;
+    line-height: 40px;
+    position: fixed;
+
+    color: #000;
+    
+    text-decoration: none;
+
+
+    
+    font-size: 23pt;
+    
+
+*/
 }
+
 
 #table-of-contents ul {
     margin-left: 14pt; 
