@@ -7,27 +7,33 @@
 *** wget
 **** 简介
     wget是linux下用来下载文件的命令,它是多线程的,如果感觉速度比较慢可以尝试多线程版本的mwget
-**** 下载一个文件
-     wget http://a.com/a.gif
+     #+BEGIN_SRC sh
+     wget http://a.com/cjk.gif #下载一个文件
+     #+END_SRC     
 *** mwget
 **** 简介
     mwget是多线程版本的wget,默认不可以使用apt-get下载它,可以 [[http://sourceforge.net/projects/kmphpfm/?source=dlp][点击这里]] 下载(http://sourceforge.net/projects/kmphpfm/?source=dlp)
-**** mwget http://ccav.com/av.avi
-     下载一个文件
-**** mwget -n 10 http://ccav.com/av.avi
-     使用10个线程下载文件
+     #+BEGIN_SRC sh
+     mwget http://ccav.com/av.avi #下载一个文件p
+     mwget -n 10 http://ccav.com/av.avi #使用10个线程下载文件
+     #+END_SRC
 *** grep
-    #+BEGIN_SRC shell
+    #+BEGIN_SRC sh
     grep '搜索文字' *.org -Rn #n标识显示行号
     #+END_SRC
 *** locate
 **** 更新数据库
-     此命令需要在使用locate的时候首先执行,否则你将搜索不到新增加的文件
-     updatedb
+     #+BEGIN_SRC sh
+     updatedb #此命令需要在使用locate的时候首先执行,否则你将搜索不到新增加的文件
+     #+END_SRC
 **** 查找包含qq的文件
+     #+BEGIN_SRC sh
      locate qq
+     #+END_SRC
 **** 查找后缀为.el的文件
+     #+BEGIN_SRC sh
      locate *.el
+     #+END_SRC
 *** find
 **** 按类型查找文件
      #+BEGIN_SRC sh
