@@ -28,9 +28,17 @@ index.org的示例
  |- test2.org  *文章test2*
  
 # 启动
-docker run -d -e git_url=https://github.com/yonh/sblog -e git_src_dir=/git/sblog -p 8888:80 index.alauda.cn/yonh/sblog
-你需要在运行的时候指定你自己的git库地址到环境变量git_url和git_src_dir=/git/你的库名
-你可以使用http://localhost:8888访问博客
+运行时指定环境变量  
+**git_src: 你的git库的url** 如：https://github.com/yonh/sblog  
+
+**git_src_dir: /git/[git名称]** 如：/git/sblog, 此名称需要和url上的项目对应  
+
+	docker run -d \
+  	-e git_url=https://github.com/yonh/sblog \
+  	-e git_src_dir=/git/sblog -p 8888:80 \
+  	index.alauda.cn/yonh/sblog
+你需要在运行的时候指定你自己的git库地址到环境变量git_url和git_src_dir=/git/你的库名  
+你可以使用http://localhost:8888访问博客  
 # 更新博客
 更新blog流程
 1. 编写org文件
