@@ -32,7 +32,7 @@ RUN gem install --no-rdoc --no-ri sinatra rqrcode_png thin
 #git库env
 RUN mkdir /git
 WORKDIR /git
-RUN git clone $git_url
+
 ADD git_pull.sh /opt/git_pull.sh
 RUN chmod +x /opt/git_pull.sh
 
