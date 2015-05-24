@@ -17,7 +17,9 @@
 **** mwget -n 10 http://ccav.com/av.avi
      使用10个线程下载文件
 *** grep
-    grep "搜索文字" *.org -Rn #n标识显示行号
+    #+BEGIN_SRC shell
+    grep '搜索文字' *.org -Rn #n标识显示行号
+    #+END_SRC
 *** locate
 **** 更新数据库
      此命令需要在使用locate的时候首先执行,否则你将搜索不到新增加的文件
