@@ -28,3 +28,9 @@
      locate qq
 **** 查找后缀为.el的文件
      locate *.el
+*** find
+**** 按类型查找文件
+     #+BEGIN_SRC sh
+     find . -type f -name "*.org" #查找org文件
+     find . -type d # 查找目录
+     #+END_SRC
