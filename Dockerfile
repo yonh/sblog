@@ -13,7 +13,7 @@ FROM ubuntu:14.04
 MAINTAINER yonh "azssjli@163.com"
 ENV REFERSHED_AT 2015-05-07
 #github上org项目的地址
-ENV git_url https://github.com/yonh/sblog
+#ENV git_url https://github.com/yonh/sblog
 #容器内下载git代码位置
 ENV git_src_dir /git/sblog
 

@@ -1,5 +1,5 @@
 #!/bin/sh
-
+/opt/git_pull.sh
 # org2html
 cd /opt/org
 ruby /opt/org/build.rb
