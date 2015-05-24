@@ -4,3 +4,5 @@ Dir[d].each { |x|
   puts "handle #{x}<br/>"
   `./org2html.sh #{x}`
 }
+
+puts "done."
