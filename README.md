@@ -38,13 +38,13 @@ index.org的示例
   	-e git_src_dir=/git/sblog -p 8888:80 \
   	index.alauda.cn/yonh/sblog
 你需要在运行的时候指定你自己的git库地址到环境变量git_url和git_src_dir=/git/你的库名  
-你可以使用http://localhost:8888访问博客  
+你可以使用http://localhost:8888 来访问博客  
 # 更新博客
 更新blog流程
 1. 编写org文件
 2. 将该文件的链接添加到index.org
 3. push代码到github
-4. 访问http://localhost:8888/update更新博客
+4. 访问http://localhost:8888/update 来更新博客
 # 使用到的技术
 emacs,docker,ruby(sinatra),css
 
