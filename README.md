@@ -1,6 +1,6 @@
 # sblog
 一个使用org文档生成html的静态博客镜像  
-可访问[这里](http://sb-yonh.alaudacn.me/)查看demo  
+可访问[这里](http://yonh-sb.daoapp.io/)查看demo  
 # 如何使用
 **1.下载镜像**  
 docker pull outindex.alauda.cn/yonh/sblog
@@ -41,7 +41,7 @@ index.org的示例
 你可以使用http://localhost:8888访问博客  
 # 更新博客
 更新blog流程  
-1. 编写org文件  
+1. 编写org文件,头部引入美化页面的style.css  
 2. 将该文件的链接添加到index.org  
 3. push代码到github  
 4. 访问http://localhost:8888/update更新博客  
