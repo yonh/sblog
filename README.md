@@ -2,6 +2,10 @@
 一个使用org文档生成html的静态博客镜像  
 可访问[这里](http://yonh-sb.daoapp.io/)查看demo  
 # 如何使用
+
+**0.使用docker build镜像[可选]
+docker build -t yonh/sblog .
+
 **1.下载镜像**  
 docker pull outindex.alauda.cn/yonh/sblog
 
@@ -29,15 +33,15 @@ index.org的示例
  
 # 启动
 运行时指定环境变量  
-**git_src: 你的git库的url** 如：http://git.oschina.net/yonh/obf  
+**git_src: 你的git库的url** 如：http://git.oschina.net/yonh/obf.git  
 
 	docker run -d \
-  	-e git_url=https://github.com/yonh/sblog.git \
+  	-e git_url=https://git.oschina.net/yonh/obf.git \
 	-p 8888:80 \
   	index.alauda.cn/yonh/sblog
 你需要在运行的时候指定你自己的git库地址到环境变量git_url  
 如果你使用上述命令运行,你可以使用http://localhost:8888 来访问博客  
-# 这里需要一些docker的知识
+这里需要一些docker的知识
 # 更新博客
 更新blog流程  
 1. 编写org文件,头部引入美化页面的style.css  
