@@ -41,6 +41,7 @@ class App < Sinatra::Application
     text
   end
   get '/update' do
+    cache = Hash.new
     `/opt/git_pull.sh`
   end
 end
