@@ -34,7 +34,7 @@ class App < Sinatra::Application
   end
 
   get '/a/images/*' do
-    send_file '/opt/org/images/'+params['splat']
+    send_file '/opt/org/images/'+params['splat'][0].to_s
   end
   
   get '/style' do
