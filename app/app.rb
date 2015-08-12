@@ -32,6 +32,11 @@ class App < Sinatra::Application
     end
     text
   end
+
+  get '/a/images/:id' do
+    send_file '/opt/org/images/'+params['id']
+  end
+  
   get '/style' do
     text = cache['/opt/webapp/public/style.css']
     if text == nil then
