@@ -33,8 +33,8 @@ class App < Sinatra::Application
     text
   end
 
-  get '/a/images/:id' do
-    send_file '/opt/org/images/'+params['id']
+  get '/a/images/*' do
+    send_file '/opt/org/images/'+params['splat']
   end
   
   get '/style' do
