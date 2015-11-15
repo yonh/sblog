@@ -10,6 +10,18 @@ class App < Sinatra::Application
     text = text.gsub("<h2>Table of Contents</h2>",'<h2><a href="">索引</a></h2>')
     # 添加返回首页
     text.gsub('<h1 class="title">','<h1 class="title"><a class="return" href="/">返回首页</a>')
+	# 添加代码高亮处理
+	
+	code_highlight = "<script src='http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js'></script>
+	<script type='text/javascript'>
+	$(document).ready(function() {
+	  $('pre').each(function(i, block) {
+	    hljs.highlightBlock(block);
+	  });
+	});
+	</script>
+	</body>"
+	text.gsub('</body>',code_highlight);
   end
   def read_file(filename)
     text = IO.read("/opt/org/html/#{filename}.html")
