@@ -12,7 +12,9 @@ class App < Sinatra::Application
     text.gsub('<h1 class="title">','<h1 class="title"><a class="return" href="/">返回首页</a>')
 	# 添加代码高亮处理
 	
-	code_highlight = "<script src='http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js'></script>
+	code_highlight = "<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css'>
+	<script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js'></script>
+	<script src='http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js'></script>
 	<script type='text/javascript'>
 	$(document).ready(function() {
 	  $('pre').each(function(i, block) {
