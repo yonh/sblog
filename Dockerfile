@@ -27,7 +27,7 @@ RUN apt-get -y install ruby ruby-dev make g++ emacs git
 #RUN gem sources --remove https://rubygems.org/
 #增加http://ruby.taobao.org/源
 #RUN gem sources -a https://ruby.taobao.org/
-RUN gem install --no-rdoc --no-ri sinatra rqrcode_png thin
+RUN gem install --no-rdoc --no-ri sinatra thin
 
 #git库env
 RUN mkdir /git
