@@ -7,7 +7,7 @@
 # sudo docker run -it --rm -p 4508:80 -v ~/git/sblog/app:/opt/webapp yonh/sblog
 # sudo docker run -d --name sblog -p 4508:80 -v ~/git/sblog/app:/opt/webapp yonh/sblog
 
-FROM ubuntu:14.04
+FROM ubuntu:24.04
 
 #镜像作者和email
 MAINTAINER yonh "azssjli@163.com"
@@ -28,7 +28,7 @@ RUN apt-get -y install ruby ruby-dev make g++ emacs git
 #增加http://ruby.taobao.org/源
 #RUN gem sources -a https://ruby.taobao.org/
 #RUN gem install --no-rdoc --no-ri sinatra thin
-RUN gem install bundler -v 1.17.3
+RUN gem install bundler -v 2.5.10
 
 
 #git库env
