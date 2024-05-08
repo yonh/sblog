@@ -15,10 +15,14 @@ docker pull outindex.alauda.cn/yonh/sblog
 **3.git库的一些约定**  
 该库需要一个org文件夹，存放生成文章的org文件，  
 必须要有一个index.org，该文件会生成网站的首页，用于链接到其他文章  
+参考：https://orgmode.org/manual/CSS-support.html
+
 index.org的示例  
 
     #+OPTIONS: \n:t
-    #+STYLE: <link rel="stylesheet" type="text/css" href="style.css" />
+    #+STYLE: <link rel="stylesheet" type="text/css" href="/style.css" /> [ 废弃 ]
+    #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/style.css" />
+    #+HTML_HEAD_EXTRA: <link rel="alternate stylesheet" type="text/css" href="/style.css" />
     * 我的文章
       [[../a/test1][测试链接1]] #a是程序定义,暂时不允许更改,照写就是了
       [[../a/test2][测试链接2]]
@@ -36,9 +40,9 @@ index.org的示例
 **git_src: 你的git库的url** 如：http://git.oschina.net/yonh/obf.git  
 
 	docker run -d \
-  	-e git_url=https://git.oschina.net/yonh/obf.git \
+  -e git_url=https://git.oschina.net/yonh/obf.git \
 	-p 8888:80 \
-  	index.alauda.cn/yonh/sblog
+  index.alauda.cn/yonh/sblog
 你需要在运行的时候指定你自己的git库地址到环境变量git_url  
 如果你使用上述命令运行,你可以使用http://localhost:8888 来访问博客  
 这里需要一些docker的知识
@@ -51,3 +55,12 @@ index.org的示例
 # 使用到的技术  
 emacs,docker,ruby(sinatra),css
 
+
+# 问题记录
+新版emacs使用原来的导致方式失败
+```bash
+emacs --batch --script ./org2html.el -infile "$1" -outfile ${tmp_file}
+> Wrong type argument: commandp, org-export-as-html
+解决方法
+emacs -l htmlize.el "$1" --batch --eval "(org-html-export-to-html)"
+```
