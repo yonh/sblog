@@ -13,4 +13,3 @@ git clone $git_url
 
 cd /opt/webapp
 thin start
-

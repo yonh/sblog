@@ -27,7 +27,9 @@ RUN apt-get -y install ruby ruby-dev make g++ emacs git
 #RUN gem sources --remove https://rubygems.org/
 #增加http://ruby.taobao.org/源
 #RUN gem sources -a https://ruby.taobao.org/
-RUN gem install --no-rdoc --no-ri sinatra thin
+#RUN gem install --no-rdoc --no-ri sinatra thin
+RUN gem install bundler -v 1.17.3
+
 
 #git库env
 RUN mkdir /git
@@ -38,7 +40,8 @@ RUN chmod +x /opt/git_pull.sh
 
 ADD app /opt/webapp/
 ADD org /opt/org/
-
+WORKDIR /opt/webapp
+RUN bundle install
 
 #公开端口
 EXPOSE 80
